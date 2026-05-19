@@ -30,7 +30,7 @@ function App() {
       <section id="links">
         <div id="docs">
           <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
+            <use href={`${import.meta.env.BASE_URL}icons.svg#documentation-icon`} />
           </svg>
           <h2>Resume</h2>
           <ul>
@@ -43,7 +43,7 @@ function App() {
         </div>
         <div id="social">
           <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
+            <use href={`${import.meta.env.BASE_URL}icons.svg#social-icon`} />
           </svg>
           <h2>Connect with me</h2>
           <ul>
@@ -54,7 +54,7 @@ function App() {
                   role="presentation"
                   aria-hidden="true"
                 >
-                  <use href="/icons.svg#github-icon"></use>
+                 <use href={`${import.meta.env.BASE_URL}icons.svg#github-icon`} />
                 </svg>
                 GitHub
               </a>
@@ -66,7 +66,8 @@ function App() {
                   role="presentation"
                   aria-hidden="true"
                 >
-                  <use href="/icons.svg#discord-icon"></use>
+                  <use href={`${import.meta.env.BASE_URL}icons.svg#discord-icon`} />
+                  
                 </svg>
                 Discord
               </a>
