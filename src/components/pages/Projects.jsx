@@ -1,9 +1,9 @@
 import Navbar from '../pieces/navbar'
 import ProjectCarousel from "../pieces/ProjectCarousel";
-import landing from "../assets/landing.png";
-import signup from "../assets/signup.png";
-import savedrecipes from "../assets/savedrecipes.png";
-import pantry from "../assets/pantry.png";
+import landing from "../../assets/landing.png";
+import signup from "../../assets/signup.png";
+import savedrecipes from "../../assets/savedrecipes.png";
+import pantry from "../../assets/pantry.png";
 
 
 const LTB = [
@@ -30,8 +30,8 @@ function Projects() {
     <>
         <Navbar />
             <div>
-                <h1>Projects</h1>
-
+                <h1><u>Projects</u></h1>
+                <br /> <br />
                 <h2>Lettuce Turnip The Beet</h2>
                 <h3> Full-stack school project (PHP + MySQL + React) </h3>
                 <p> A web application for managing and organizing recipes.  </p>
