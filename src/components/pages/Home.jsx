@@ -1,15 +1,17 @@
 import { useState } from 'react'
-import headshot from './assets/headshot.jpg'
-import linImage from './assets/InBug-Black.png'
-import resume from './assets/resume.pdf'
-import emailicon from './assets/gmail.svg'
+import headshot from '../../assets/headshot.jpg'
+import linImage from '../../assets/InBug-Black.png'
+import resume from '../../assets/resume.pdf'
+import emailicon from '../../assets/gmail.svg'
 import './Home.css'
+import Navbar from '../pieces/navbar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <Navbar />
       <section id="bio">
         <div className="Headshot">
           <img src={headshot} className="head" width="1700" height="179" alt="Headshot" />
@@ -60,19 +62,6 @@ function App() {
               </a>
             </li>
             <li>
-              <a href="https://discord.gg/QNh4QNrN" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href={`${import.meta.env.BASE_URL}icons.svg#discord-icon`} />
-                  
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
               <a href="https://www.linkedin.com/in/codykubiak/" target="_blank">
                 <img
                   src={linImage}
@@ -104,4 +93,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
