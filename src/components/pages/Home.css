@@ -1,22 +1,3 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-}
-
 .Headshot {
   position: relative;
   display: flex;
@@ -46,6 +27,32 @@
     flex: 1;
     flex-direction: column;
   } 
+}
+
+.langs {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 26px;
+  justify-content: center;
+  font-size: 3rem;
+
+  .react {
+    color: #61DAFB;
+  }
+  .html {
+    color: #E34C26;
+  }
+  .python {
+    color: #3776AB;
+  }
+  .java {
+    color: #ED8B00;
+  }
+  .c {
+    color: #5A92C4;
+  }
 }
 
 #headshot {
