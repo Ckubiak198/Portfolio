@@ -4,12 +4,14 @@ import linImage from './assets/InBug-Black.png'
 import resume from './assets/resume.pdf'
 import emailicon from './assets/gmail.svg'
 import './Home.css'
+import Navbar from './components/navbar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <Navbar />
       <section id="bio">
         <div className="Headshot">
           <img src={headshot} className="head" width="1700" height="179" alt="Headshot" />
