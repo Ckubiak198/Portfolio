@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import headshot from '../assets/headshot.jpg'
-import linImage from '../assets/InBug-Black.png'
-import resume from '../assets/resume.pdf'
-import emailicon from '../assets/gmail.svg'
+import headshot from '../../assets/headshot.jpg'
+import linImage from '../../assets/InBug-Black.png'
+import resume from '../../assets/resume.pdf'
+import emailicon from '../../assets/gmail.svg'
 import './Home.css'
-import Navbar from './navbar'
+import Navbar from '../pieces/navbar'
 
 function App() {
   const [count, setCount] = useState(0)

@@ -1,4 +1,4 @@
-import Navbar from './navbar'
+import Navbar from '../pieces/navbar'
 
 function About() {
     return (

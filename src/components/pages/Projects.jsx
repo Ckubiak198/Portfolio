@@ -1,5 +1,5 @@
-import Navbar from './navbar'
-import ProjectCarousel from "./ProjectCarousel";
+import Navbar from '../pieces/navbar'
+import ProjectCarousel from "../pieces/ProjectCarousel";
 import landing from "../assets/landing.png";
 import signup from "../assets/signup.png";
 import savedrecipes from "../assets/savedrecipes.png";
