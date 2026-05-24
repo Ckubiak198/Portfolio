@@ -16,7 +16,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 0 32px;
 }
 
@@ -26,6 +25,9 @@
   color: #fdfdfd;
   letter-spacing: -0.5px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .navbar-links {
@@ -49,6 +51,12 @@
   text-decoration: none;
 
   transition: all 0.2s ease;
+
+  @media (max-width: 768px) {
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
 }
 
 .nav-item:hover {

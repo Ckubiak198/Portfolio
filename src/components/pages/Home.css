@@ -11,6 +11,13 @@
     margin: 0 auto;
   }
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 16px;
+  }
+
   .head {
     border-radius: 50%;
     border: 2px solid white;
@@ -20,6 +27,14 @@
     margin-left: 64px;
     margin-top: 16px;
     margin-bottom: 16px;
+
+    @media (max-width: 768px) {
+      width: 150px;
+      height: 150px;
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 0px;
+    }
     
   }
 
@@ -27,45 +42,31 @@
     flex: 1;
     flex-direction: column;
   } 
-}
 
-.langs {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  gap: 16px;
-  margin-top: 26px;
-  justify-content: center;
-  font-size: 3rem;
+  .langs {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 26px;
+    justify-content: center;
+    font-size: 3rem;
 
-  .react {
-    color: #61DAFB;
-  }
-  .html {
-    color: #E34C26;
-  }
-  .python {
-    color: #3776AB;
-  }
-  .java {
-    color: #ED8B00;
-  }
-  .c {
-    color: #5A92C4;
-  }
-}
-
-#headshot {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
+    .react {
+      color: #61DAFB;
+    }
+    .html {
+      color: #E34C26;
+    }
+    .python {
+      color: #3776AB;
+    }
+    .java {
+      color: #ED8B00;
+    }
+    .c {
+      color: #5A92C4;
+    }
   }
 }
 
