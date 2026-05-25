@@ -21,9 +21,12 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 32px;        /* instead of margin-left/right */
-  box-sizing: border-box; /* so padding doesn't add to width */
+  padding: 0 32px;       
+  box-sizing: border-box; 
 
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .navbar-logo, .navbar-logo:visited, .navbar-logo:active {
