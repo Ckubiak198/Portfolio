@@ -27,7 +27,6 @@ function App() {
               Recent Computer Science graduate from the University at Buffalo.
                Open to work.
             </p>
-        {/* put img of lang and tools here */}
             <div className={"langs"}>
               <FontAwesomeIcon icon={faReact} className = "react" />
               <FontAwesomeIcon icon={faHtml5} className = "html" />

@@ -7,6 +7,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar-container {
@@ -17,15 +21,23 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 32px;
+  padding: 0 32px;       
+  box-sizing: border-box; 
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
-.navbar-logo {
+.navbar-logo, .navbar-logo:visited, .navbar-logo:active {
   font-size: 20px;
   font-weight: 600;
   color: #fdfdfd;
   letter-spacing: -0.5px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .navbar-links {
@@ -49,6 +61,12 @@
   text-decoration: none;
 
   transition: all 0.2s ease;
+  
+  @media (max-width: 768px) {
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
 }
 
 .nav-item:hover {
