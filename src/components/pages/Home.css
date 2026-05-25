@@ -1,0 +1,162 @@
+.Headshot {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  .base,
+  .framework,
+  .vite {
+    inset-inline: 0;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 16px;
+  }
+
+  .head {
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    margin-left: 64px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    @media (max-width: 768px) {
+      width: 150px;
+      height: 150px;
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 0px;
+    }
+    
+  }
+
+  .headshot-text {
+    flex: 1;
+    flex-direction: column;
+  } 
+
+  .langs {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 26px;
+    justify-content: center;
+    font-size: 3rem;
+
+    .react {
+      color: #61DAFB;
+    }
+    .html {
+      color: #E34C26;
+    }
+    .python {
+      color: #3776AB;
+    }
+    .java {
+      color: #ED8B00;
+    }
+    .c {
+      color: #5A92C4;
+    }
+  }
+}
+
+#links {
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#docs {
+  border-right: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+#links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin: 32px 0 0;
+
+  .logo {
+    height: 18px;
+  }
+
+  a {
+    color: var(--text-h);
+    font-size: 16px;
+    border-radius: 6px;
+    background: var(--social-bg);
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: var(--shadow);
+    }
+    .button-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}

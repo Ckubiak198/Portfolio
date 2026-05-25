@@ -1,0 +1,131 @@
+.carousel-root {
+  font-family: var(--font-sans, sans-serif);
+  outline: none;
+  padding: 1rem 0;
+}
+
+.carousel-track {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-background-secondary, #010206);
+  aspect-ratio: 16 / 9;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.35s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide img {
+  width: 90%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.carousel-slide video {
+  width: 90%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.carousel-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-placeholder i {
+  font-size: 36px;
+  color: var(--color-text-secondary, #888);
+}
+
+.carousel-placeholder-label {
+  font-size: 13px;
+  color: var(--color-text-secondary, #888);
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: var(--color-background-primary, #fff);
+  border: 0.5px solid var(--color-border-secondary, #ccc);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s;
+  color: var(--color-text-primary, #000000);
+}
+
+.carousel-arrow:hover {
+  background: var(--color-background-secondary, #f5f5f5);
+}
+
+.carousel-arrow.left  { left: 12px; }
+.carousel-arrow.right { right: 12px; }
+
+.carousel-arrow i {
+  font-size: 18px;
+}
+
+.carousel-footer {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 14px;
+  justify-content: center; 
+}
+
+.carousel-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border-secondary, #ccc);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.carousel-dot.active {
+  background: var(--color-text-primary, #1564e3);
+  transform: scale(1.35);
+}
+
+.carousel-caption {
+  margin-top: 10px;
+  min-height: 42px;
+}
+
+.carousel-caption-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary, #fcfafa);
+  margin: 0 0 2px;
+}
+
+.carousel-caption-desc {
+  font-size: 13px;
+  color: var(--color-text-secondary, #888);
+  margin: 0;
+}
+

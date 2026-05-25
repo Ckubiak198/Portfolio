@@ -1,0 +1,13 @@
+.about-bio{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    text-wrap: balance;
+}
+
+.videos {
+    margin-top: 64px;
+}
