@@ -1,10 +1,15 @@
-import { useState } from 'react'
-import headshot from '../../assets/headshot.jpg'
-import linImage from '../../assets/InBug-Black.png'
-import resume from '../../assets/resume.pdf'
-import emailicon from '../../assets/gmail.svg'
-import './Home.css'
-import Navbar from '../pieces/navbar'
+import { useState } from 'react';
+import headshot from '../../assets/headshot.jpg';
+import linImage from '../../assets/InBug-Black.png';
+import resume from '../../assets/resume.pdf';
+import emailicon from '../../assets/gmail.svg';
+import './Home.css';
+import Navbar from '../pieces/navbar';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faHtml5, faPython, faReact, faJava } from "@fortawesome/free-brands-svg-icons";
+import c from '../../assets/c.svg';
+
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,9 +27,14 @@ function App() {
               Recent Computer Science graduate from the University at Buffalo.
                Open to work.
             </p>
-
         {/* put img of lang and tools here */}
-
+            <div className={"langs"}>
+              <FontAwesomeIcon icon={faReact} className = "react" />
+              <FontAwesomeIcon icon={faHtml5} className = "html" />
+              <FontAwesomeIcon icon={faPython} className = "python" />
+              <FontAwesomeIcon icon={faJava} className = "java" />
+              <img src={c} className = "c" />
+            </div>
           </div>
         </div>
       </section>

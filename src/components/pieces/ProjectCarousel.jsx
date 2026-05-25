@@ -22,6 +22,22 @@ export default function ProjectCarousel({
     [total]
   );
 
+    useEffect(() => {
+    const track = carouselRef.current;
+    if (!track) return;
+    const videos = track.querySelectorAll("video");
+    videos.forEach((v, i) => {
+      if (i === current) {
+        v.currentTime = 0;
+        v.pause();
+      } else {
+        v.pause();
+        v.currentTime = 0;
+      }
+    });
+  }, [current]);
+
+
   useEffect(() => {
     const el = carouselRef.current;
     if (!el) return;
@@ -49,9 +65,13 @@ export default function ProjectCarousel({
             key={i}
             aria-hidden={i !== current}
             className="carousel-slide"
-            style={{ opacity: i === current ? 1 : 0, pointerEvents: i === current ? "auto" : "none" }}
+            style={{ opacity: i === current ? 1 : 0,
+                     pointerEvents: i === current ? "auto" : "none" }}
           >
-            {s.image ? (
+            {s.video ? (
+              <SlideVideo src={s.video } active={i === current} />
+            ) :
+            s.image ? (
               <img src={s.image} alt={s.title} />
             ) : (
               <div className="carousel-placeholder">
@@ -89,6 +109,35 @@ export default function ProjectCarousel({
     </div>
   );
 }
+
+function SlideVideo({ src, active }) {
+  const videoRef = useRef(null);
+ 
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (active) {
+      v.currentTime = 0;
+      v.play().catch(() => {});
+    } else {
+      v.pause();
+      v.currentTime = 0;
+    }
+  }, [active]);
+ 
+  return (
+    <video
+      ref={videoRef}
+      className="carousel-video"
+      src={src}
+      loop
+      muted
+      playsInline
+      controls
+    />
+  );
+}
+
 
 function ArrowBtn({ direction, onClick, label }) {
   return (
