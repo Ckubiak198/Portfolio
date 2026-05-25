@@ -7,6 +7,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar-container {
@@ -16,16 +20,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 4px;
+
+  padding: 0 32px;        /* instead of margin-left/right */
+  box-sizing: border-box; /* so padding doesn't add to width */
+
 }
 
-.navbar-logo {
+.navbar-logo, .navbar-logo:visited, .navbar-logo:active {
   font-size: 20px;
   font-weight: 600;
   color: #fdfdfd;
   letter-spacing: -0.5px;
   cursor: pointer;
-
   @media (max-width: 768px) {
     display: none;
   }
@@ -52,6 +58,7 @@
   text-decoration: none;
 
   transition: all 0.2s ease;
+  
   @media (max-width: 768px) {
     padding: 12px 16px;
     border-radius: 10px;

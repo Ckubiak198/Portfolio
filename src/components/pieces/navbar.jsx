@@ -14,7 +14,9 @@ export default function Navbar() {
     <header className="navbar">
       <div className="navbar-container">
         <h1 className="navbar-logo">
-          Cody Kubiak
+          <NavLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            Cody Kubiak
+          </NavLink>
         </h1>
 
         <nav className="navbar-links">
